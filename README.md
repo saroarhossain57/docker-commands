@@ -2,6 +2,12 @@
 
 👉 To see details of any command attach ` --Help `
 
+### Build an image from Dockerfile
+> here . is destination from where I can get the Dockerfile
+```
+$ docker build . 
+```
+
 ### Show all running containers
 ```
 docker ps 
@@ -62,3 +68,27 @@ $ docker stop <container-name>
 ```
 $ docker attach <container-name>
 ```
+
+## 👉 To all the logs from a running container use below command.
+> Node: use `-f` option to see the logs in attach mode.
+```
+$ docker logs  <container-name>
+```
+
+## Deleting containers and images.
+
+### Remove one or multiple containers
+```
+$ docker rm <one_or_more_container_names>
+```
+
+### ✔🎁 Remove docker images
+```
+$ docker rmi <image_name>
+```
+
+### Automatically remvoe a container when the container is stoped.
+```
+$ docker run -p 3000:80 -d --rm
+```
+> `--rm` flag here telling to remove container automatically. 
