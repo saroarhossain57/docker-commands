@@ -1,6 +1,6 @@
 # docker-commands
 
-To see details of any command attach ` --Help `
+👉 To see details of any command attach ` --Help `
 
 ### Show all running containers
 ```
@@ -41,5 +41,15 @@ docker run --name <container-name> <image-name>
 
 ### run a new docker container with given port for outside world.
 ```
-docker run -p 8080:80 <image-name>
+$ docker run -p 8080:80 <image-name>
 ```
+
+### Run docker image in detach mode. By default docker run image in attached mode.
+```
+$ docker run -p 8000:80 -d <image-id>
+```
+### 😎 You can use below command to start a container in attach mode.
+```
+$ docker attach <container-name>
+```
+
