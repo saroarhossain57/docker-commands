@@ -53,3 +53,12 @@ $ docker run -p 8000:80 -d <image-id>
 $ docker attach <container-name>
 ```
 
+## 👉 Stop a running container.
+```
+$ docker stop <container-name>
+```
+
+## 👉 When a container is in running mode we can attach it with below command.
+```
+$ docker attach <container-name>
+```
