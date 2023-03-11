@@ -92,3 +92,30 @@ $ docker rmi <image_name>
 $ docker run -p 3000:80 -d --rm
 ```
 > `--rm` flag here telling to remove container automatically. 
+
+
+## Copy from one container to another container. 
+```
+$ docker cp <copy_folder> <destination_container_name>:<path>
+```
+
+## Naming containers and images.
+### Give a name to a container 
+```
+$ docker run -p 3000:80 --name <app_name> <image_name>
+```
+
+### Give a name to a already existing image with tag
+```
+$ docker tag <image_id> <given_name>:<given_tag>
+```
+> Here we can say given name = `myapp` and tag = `v1.0.0`.
+
+### Give a name to a image while building the image with docker build
+```
+$ docker build -t <image_name>:<tag> <path_to_dockerfile>
+```
+Example:
+```
+$ docker build -t myapp:v1.0.0 .
+```
