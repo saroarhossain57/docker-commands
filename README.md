@@ -119,3 +119,30 @@ Example:
 ```
 $ docker build -t myapp:v1.0.0 .
 ```
+
+## Docker image push, pull and share etc.
+### 👉 Push image to dockerhub repository.
+```
+$ docker push saroarhossain/mygoals-app:tagname
+```
+> First always give a same name for local docker image as the dockerhub repository name.
+> If you are not logged in from yoru terminal to docker hub then you need to login before push. otherwise it will give us a denied error.
+
+### Login to dockerhub from terminal command
+```
+$ docker login
+```
+> It will ask for username and password.
+
+### You can also logout from terminal using below command
+```
+$ docker logout
+```
+
+### Pull a image from dockerhub.
+
+# Docker Volumes
+## There is named volume and unnamed volume.
+## learn about bind mount volume. because it will be changed while building application.
+
+if we use only volume to store file then we always need to rebuild for any file changes in the source code. But if we bind mount the volume then the container will store the files in our local machine and always pull the codes from our local machine while running so our codes will be always available and the changes will reflect always because the container will call the codes from our local machine whenever it runs inside container.
