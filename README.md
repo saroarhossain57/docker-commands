@@ -146,3 +146,28 @@ $ docker logout
 ## learn about bind mount volume. because it will be changed while building application.
 
 if we use only volume to store file then we always need to rebuild for any file changes in the source code. But if we bind mount the volume then the container will store the files in our local machine and always pull the codes from our local machine while running so our codes will be always available and the changes will reflect always because the container will call the codes from our local machine whenever it runs inside container.
+
+
+# Docker NetWorking
+## How to call remote APIs.
+
+
+# Docker compose
+## Create compose file
+create docker-compose.yaml in root dir
+
+```
+version: "3.8"
+services: 
+    mongodb:
+        image: "mongo"
+        volumes: 
+            - data: /data/db
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: pass
+    backend:
+
+    frontend
+
+```
